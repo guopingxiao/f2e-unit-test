@@ -1,8 +1,8 @@
 {
-  "name": "vue-koa-demo",
+  "name": "f2e-test-demo",
   "version": "1.0.0",
-  "description": "A Vue.js & Koa project",
-  "author": "Molunerfinn <marksz@teamsz.xyz>",
+  "description": "A F2E TEST project",
+  "author": "xiaoguoping",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",

@@ -1,7 +1,7 @@
 {
   "apps": [
     {
-      "name": "vue-koa-demo",
+      "name": "f2e unit test",
       "script": "server-entry.js",
       "watch": ["server","app.js","public",".env"],
       "ignore_watch": ["node_modules"],
