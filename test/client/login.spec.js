@@ -70,7 +70,7 @@ test('Failed to login if not typing the username & password', async () => {
 
 test('Failed to login if not typing the correct password', async () => {
   wrapper.setData({
-    account: 'molunerfinn',
+    account: 'xiaoguoping',
     password: '1234'
   })
   const result = await wrapper.vm.loginToDo()
@@ -80,7 +80,7 @@ test('Failed to login if not typing the correct password', async () => {
 
 test('Succeeded to login if typing the correct account & password', async () => {
   wrapper.setData({
-    account: 'molunerfinn',
+    account: 'xiaoguoping',
     password: '123'
   })
   const result = await wrapper.vm.loginToDo()
