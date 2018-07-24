@@ -119,18 +119,18 @@ let wrapper
 beforeEach(() => {
   wrapper = mount(Todolist)
   wrapper.setData({
-    name: 'Molunerfinn',
+    name: 'xiaoguoping',
     id: 2
   })
 })
 
-// test 1
+// test 1 getUserInfo getTodos
 test('Should get the right username & id', () => {
-  expect(wrapper.vm.name).toBe('Molunerfinn')
+  expect(wrapper.vm.name).toBe('xiaoguoping')
   expect(wrapper.vm.id).toBe(2)
 })
 
-// test 2
+// test 2 键盘事件
 test('Should trigger addTodos when typing the enter key', () => {
   const stub = jest.fn()
   wrapper.setMethods({
@@ -141,7 +141,7 @@ test('Should trigger addTodos when typing the enter key', () => {
   expect(stub).toBeCalled()
 })
 
-// test 3
+// test 3 添加任务
 test('Should add a todo if handle in the right way', async () => {
   wrapper.setData({
     todos: 'Test',
@@ -160,7 +160,7 @@ test('Should add a todo if handle in the right way', async () => {
   ])
 })
 
-// test 4
+// test 4 选项卡切换
 test('Should restore a todo if click the restore button', async () => {
   wrapper.setData({
     activeName: 'second' // 切换到第二个选项卡
@@ -185,7 +185,7 @@ test('Should restore a todo if click the restore button', async () => {
   expect(wrapper.contains('.no-finished')).toBeTruthy()
 })
 
-// test 5
+// test 5 删除功能
 test('Should remove a todo if click the remove button', async () => {
   wrapper.setMethods({
     getTodolist: jest.fn(() => {
@@ -200,7 +200,7 @@ test('Should remove a todo if click the remove button', async () => {
   expect(wrapper.contains('.no-finished')).not.toBeTruthy()
 })
 
-// test 6
+// test 6 完成功能
 test('Should finish a todo if click the finish button', async () => {
   wrapper.setMethods({
     getTodolist: jest.fn(() => {
@@ -221,7 +221,7 @@ test('Should finish a todo if click the finish button', async () => {
   expect(wrapper.contains('.no-finished')).not.toBeTruthy()
 })
 
-// test 7
+// test 7 快照测试
 test('Should have the expected html structure', () => {
   expect(wrapper.element).toMatchSnapshot()
 })
