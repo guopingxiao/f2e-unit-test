@@ -19,13 +19,10 @@
   </a>
 </p>
 
+## Run
 
 `npm install` or `yarn`
 
-
-## Run
-
-> Node.js & Docker support. **You need to create a `.env` file as above**.
 
 ## Node.js
 
