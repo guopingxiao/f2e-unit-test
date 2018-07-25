@@ -1,29 +1,7 @@
 const MockDate = require('mockdate')
-
-const getDouble = require('../modules/getDouble')
 const debounce = require('../modules/debounce')
 
-describe('=======getDouble module =======', () => {
-  it('test timers', () => {
-    jest.useFakeTimers()
-    const mockFn = jest.fn()
-    getDouble(10, mockFn)
-    expect(mockFn).not.toHaveBeenCalled()
-    jest.runAllTimers()
-    expect(mockFn).toHaveBeenCalledTimes(1)
-    expect(mockFn).toHaveBeenCalledWith(20)
-    jest.useRealTimers()
-  })
-})
-
-describe('=======debounce function ====', () => {
-  const fastforward = (time) => {
-    let now = +new Date()
-    now += time
-    MockDate.set(now)
-    jest.runTimersToTime(time)
-  }
-
+describe('======= debounce function ====', () => {
   it('should be called after 100 ms', () => {
     const mockFn = jest.fn()
     const run = debounce(mockFn, 100)
@@ -44,6 +22,12 @@ describe('=======debounce function ====', () => {
     jest.useRealTimers()
   })
 
+  const fastforward = (time) => {
+    let now = +new Date()
+    now += time
+    MockDate.set(now)
+    jest.runTimersToTime(time)
+  }
   it('should be called after 100 ms', () => {
     const mockFn = jest.fn()
     const run = debounce(mockFn, 100)

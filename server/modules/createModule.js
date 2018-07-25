@@ -1,9 +1,9 @@
 // createModule.js
-const getRandom = require('./getNumber').getRandom
+const getModuleId = require('./getModuleId')
 
 module.exports = function createModule (name) {
   return {
     name,
-    id: `${name}-${getRandom(10000)}`
+    id: `${name}-${getModuleId(10000)}`
   }
 }
