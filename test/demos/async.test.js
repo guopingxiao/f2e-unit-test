@@ -1,4 +1,4 @@
-const fetchData = require('../modules/fetchData')
+const fetchData = require('../../server/modules/fetchData')
 
 describe('=======test async =======', () => {
   test('test callback', (done) => {

@@ -4,10 +4,8 @@ function getModuleId () {
   return id
 }
 
-getModuleId._setId = (_id) => {
+getModuleId.get = (_id) => {
   id = _id
 }
 
-module.exports = {
-  getModuleId
-}
+module.exports = getModuleId

@@ -1,17 +1,8 @@
-describe('======= 测试断言 =======', () => {
+describe('======= test matchers =======', () => {
   test('test equal', () => {
-    expect(4 * 2).toBe(8) // ===
+    expect(4 * 2).toBe(8) // === expect(4 * 2).to.be.equal(8)
     expect(1).not.toBe(2)
     expect({ bar: 'bar' }).toEqual({ bar: 'bar' }) // deep equal
-
-    expect(1 === 2).toBeFalsy()
-    expect(false).not.toBeTruthy()
-
-    expect(Promise.resolve('problem')).resolves.toBe('problem')
-    expect(Promise.reject('assign')).rejects.toBe('assign')
-
-    expect(['apple', 'banana']).toContain('banana')
-    expect([{name: 'Homer'}]).toContainEqual({name: 'Homer'})
   })
 
   test('test boolean', () => {

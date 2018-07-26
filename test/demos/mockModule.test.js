@@ -5,14 +5,9 @@ const createModule = require('../../server/modules/createModule')
 
 describe('test mock module', function () {
   it('test module file', () => {
-    getModuleId._setId(100)
+    let id = getModuleId.get(100)
     const module = createModule('module')
-    expect(module.id).toBe('module-100')
-  })
-  it('test module implementation', () => {
-    getModuleId.mockImplementation(() => 100)
-    const module = createModule('module')
-    expect(module.id).toBe('module-100')
+    expect(module.id).toBe('module-' + id)
   })
   it('test complex implementation', () => {
     const myMockFn = jest

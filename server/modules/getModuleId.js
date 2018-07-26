@@ -1,5 +1,8 @@
-module.exports = {
-  getModuleId: (range) => {
-    return Math.floor(Math.random() * range)
-  }
+function getModuleId () {
 }
+
+getModuleId.get = function (range) {
+  return Math.floor(Math.random() * range)
+}
+
+module.exports = getModuleId
