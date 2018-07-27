@@ -1,11 +1,11 @@
 import todolist from '../models/todolist.js'
 
 const getTodolist = async function (ctx) {
-  const id = ctx.params.id // 获取url里传过来的参数里的id
-  const result = await todolist.getTodolistById(id) // 通过await “同步”地返回查询结果
+  const id = ctx.params.id
+  const result = await todolist.getTodolistById(id)
   ctx.body = {
     success: true,
-    result // 将请求的结果放到response的body里返回
+    result
   }
 }
 
